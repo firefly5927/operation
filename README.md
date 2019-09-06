@@ -1,6 +1,4 @@
 
-flutter study demo .
-
 # operation
 
 A new Flutter project.
