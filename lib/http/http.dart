@@ -42,6 +42,7 @@ class Http {
       if (_map.containsKey(api)) {
         if (!_map[api].isCancelled) _map[api].cancel('canceled'); //取消请求
       }
+      ///分析源码可知，canceltoken如果被修改成了canceled，那么在赋值给他，是不能去请求数据的。
       _map[api] = new CancelToken();
     } else {
       _cancelTokenMap[tag] = new Map();
